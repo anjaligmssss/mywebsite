@@ -1,260 +1,136 @@
-
- *{
-    margin:0;
-    padding :0;
-    box-sizing: border-box;
-    /* background-color: #FFFBDE; */
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 300;
-    color: #0B1D51;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
-/* -------------- Nav bar --------------- */
-.nav{
-    height : 50px;
-    padding : 10px;
-      display:flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #DCD0A8;
+a {
+  text-decoration: none;
+  color: #2575fc;
 }
 
-.nav-option{
-    display:flex;
-    gap : 40px;
-    cursor: pointer;
+a:hover {
+  text-decoration: underline;
 }
 
-.nav i{
-    color: #0056b3;
-    font-size: 30px;
-       cursor: pointer;
+.navbar {
+  background-color: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.nav-option p{
-    color: #0056b3;
-    font-size: 20px;
-    font-weight: 600;
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
 }
 
-/* -------------- Intro --------------- */
-
-main{
-  background-color: #78B9B5;
-  border-top : 0.5 px solid grey; 
-}
-main div{
-    padding-top: 5px;
-}
-.discription{
-       height : 800px;;
-       width:80%;
-       margin-left: 125px; 
-       background-color: #FFFBDE;
-     
-}
-
-
-.intro{
-   display: flex;
-    align-items: center;
-    flex-direction : column;
-    
-}
-
-.intro h1{
-    padding: 4px 0 2px 0;
-    font-weight: 500;
-    color : #065084;
-}
-
-.intro h3{
-    padding: 0 0 2px 0;
-    font-weight: 300;
-    }
-
-/* -------------- Quote --------------- */
-
-.heading{
-    color: #065084;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular';
-}
-
-.quote{
-     /* background-image: url('https://tse4.mm.bing.net/th/id/OIP.PwBTz9353AQJIAS-micmwgHaEv?pid=Api&P=0&h=180');
-     background-size: cover; */
-     color : #065084;
-     /* height : 50%;
-     width: 70%; */
-    font-style:italic;
-    font-size: 20px;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 40px;
-}
-.about-me{
-  padding: 20px;
-  color: #065084;
-  margin-top: 30px;
-  margin-bottom: 10px;
-
-}
-
-.skill {
-  color: #065084;
-  padding-left: 20px;
-  
-}
-
-ul{
-     list-style: disc inside;
-     }
-
-form {
-    padding-left: 20px;
-  margin-top: 15px;
-  color: #065084;
-}
-
-input, textarea {
-  width: 90%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-button {
-  background-color: #065084;
+.hero {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.btn {
+  background-color: white;
+  color: #2575fc;
   padding: 10px 20px;
-  border: none;
   border-radius: 5px;
-  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s;
 }
 
-button:hover {
-  background-color: #0056b3;
+.btn:hover {
+  background-color: #f0f0f0;
 }
 
-/* Footer styling */
-footer {
-   background-color: #DCD0A8;
-  color: #0056b3;
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #fff;
   padding: 20px;
-  display: flex;
-  justify-content: space-around;
-  /* margin-top: 50px; */
-  height : 60px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
 }
 
-footer div {
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+footer {
+  padding: 20px;
+  background: #eee;
+  font-size: 0.9rem;
+}
+
+.query {
+  background: #f1f5f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.query form {
+  max-width: 600px;
+  margin: 30px auto 0;
   display: flex;
-  align-items: center;
-  gap: 10px;
-}    
+  flex-direction: column;
+  gap: 15px;
+}
 
-@media (max-width: 768px) {
+.query input,
+.query textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
 
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: 10px;
-    background-color: #DCD0A8;
-  }
+.query button {
+  padding: 12px;
+  background-color: #2575fc;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-  .nav-option {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px 0;
-    color: #0056b3;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
-  }
-
-  .discription {
-    width: 90%;
-    margin: auto;
-    height: auto;
-    padding: 10px;
-    background-color: #FFFBDE;
-    color: #0B1D51;
-    font-family: 'Times New Roman', Times, serif;
-  }
-
-  .intro h1 {
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 500;
-    color: #065084;
-  }
-
-  .intro h3 {
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 300;
-    color: #0B1D51;
-  }
-
-  .quote {
-    font-size: 1em;
-    text-align: center;
-    padding: 10px;
-    font-style: italic;
-    font-weight: 400;
-    color: #065084;
-  }
-
-  .about-me,
-  .skill,
-  form {
-    padding: 10px;
-    color: #065084;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 300;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    font-family: 'Times New Roman', Times, serif;
-    color: #0B1D51;
-  }
-
-  button {
-    background-color: #065084;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Times New Roman', Times, serif;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #0056b3;
-  }
-
-  footer {
-    flex-direction: column;
-    height: auto;
-    align-items: flex-start;
-    padding: 10px;
-    background-color: #DCD0A8;
-    color: #0056b3;
-    font-family: 'Times New Roman', Times, serif;
-  }
-
-  footer div {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
+.query button:hover {
+  background-color: #1a5ed9;
 }
